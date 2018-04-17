@@ -181,6 +181,10 @@ unless you are already using Git 2.0 where it is the default.
 Finally, the third side of the triangle is pull requests from your fork repo to the
 main repo.
 
+Further you should clone the submodule.
+
+    git submodule update -init --checkout
+
 ### How to do a Pull Request
 If you've forked the repo on GitHub then it is dead easy to make a pull request.
 Go to your forked GitHub repository, switch to the bugfix/feature branch you created and click the **New pull request** button right next to it. That's it!
@@ -193,7 +197,9 @@ In order to install Jekyll:
   * Open a console
   * Type `bundle install`
 
-There should be a lot of console ouput if you are doing this for the first time. At the end there should be some sort of success report.
+There should be a lot of console ouput if you are doing this for the first time. At the end there should be some sort of success report. 
+
+In case the command fails under Linux with a message like `can't find header files for ruby at /usr/lib/ruby/include/ruby.h`, please  type `apt-get install ruby-dev` in a console. In addition to that, check that there is zlib1g-dev installed. If not, install this package to typing `apt-get install zlib1g-dev` in the console.
 
 Run Jekyll in the root directory to build:
 
